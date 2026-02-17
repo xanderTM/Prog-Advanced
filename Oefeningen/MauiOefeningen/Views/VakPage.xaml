@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiOefeningen.Views.VakPage"
+             Title="Vak">
+    <StackLayout>
+        <VerticalStackLayout HorizontalOptions="Start" Margin="5">
+            <Label 
+            Text="Programming Advanced"
+            Margin="5"
+            VerticalOptions="Center" 
+            FontSize="Small" />
+        
+        <Image Source="pa.png" HeightRequest="100" HorizontalOptions="Start" Margin="5"/>
+        
+            <HorizontalStackLayout Margin="5">
+                <Entry Placeholder="Voornaam" WidthRequest="200" />
+                <Entry Placeholder="Naam" WidthRequest="500" />
+            </HorizontalStackLayout>
+        
+            <Entry Placeholder="Locatie campus" WidthRequest="700" Margin="5" HorizontalOptions="Start" />
+        </VerticalStackLayout>
+    </StackLayout>
+</ContentPage>
