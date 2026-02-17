@@ -1,0 +1,32 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiOefeningen.Views.AfbeeldingenPage"
+             Title="Afbeeldingen">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+
+            <Label Text="Selecteer een getal:"
+                   VerticalOptions="Center"/>
+
+            <Label Text="getal"
+                   VerticalOptions="Center"/>
+
+            <Stepper Minimum="1"
+                     Maximum="5"
+                     Value="1"
+                     VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <Button Text="Afbeelding tonen"
+        BackgroundColor="#5B2DCB"
+        TextColor="White"
+        HeightRequest="55"
+        HorizontalOptions="Start"
+        WidthRequest="250"/>
+
+        <Image Source="landschap1.jpg" Aspect="AspectFill"/>
+
+    </VerticalStackLayout>
+</ContentPage>

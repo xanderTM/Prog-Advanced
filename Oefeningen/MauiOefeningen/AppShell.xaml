@@ -18,7 +18,12 @@
         Route="NaamTonenPage" />
 
     <ShellContent
-    Title="VakPage"
-    ContentTemplate="{DataTemplate views:VakPage}"
-    Route="VakPage" />
+        Title="VakPage"
+        ContentTemplate="{DataTemplate views:VakPage}"
+        Route="VakPage" />
+
+    <ShellContent
+        Title="AfbeeldingenPage"
+        ContentTemplate="{DataTemplate views:AfbeeldingenPage}"
+        Route="AfbeeldingenPage" />
 </Shell>

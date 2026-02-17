@@ -20,8 +20,8 @@
         </HorizontalStackLayout>
 
         <HorizontalStackLayout>
-            <Button Text="Naam Tonen" Margin="5" WidthRequest="550"/>
-            <Button Text="Resultaat leegmaken" Margin="5" WidthRequest="550"  />
+            <Button Text="Naam Tonen" Margin="5" WidthRequest="550" BackgroundColor="#5B2DCB" TextColor="White"/>
+            <Button Text="Resultaat leegmaken" Margin="5" WidthRequest="550" BackgroundColor="#5B2DCB" TextColor="White" />
         </HorizontalStackLayout>
         <Label Text="Resultaat" Margin="5" />
     </VerticalStackLayout>

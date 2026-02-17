@@ -10,15 +10,45 @@
             Margin="5"
             VerticalOptions="Center" 
             FontSize="Small" />
-        
-        <Image Source="pa.png" HeightRequest="100" HorizontalOptions="Start" Margin="5"/>
-        
+
+            <Image Source="pa.png" HeightRequest="100" HorizontalOptions="Start" Margin="5"/>
+
             <HorizontalStackLayout Margin="5">
                 <Entry Placeholder="Voornaam" WidthRequest="200" />
                 <Entry Placeholder="Naam" WidthRequest="500" />
             </HorizontalStackLayout>
-        
+
             <Entry Placeholder="Locatie campus" WidthRequest="700" Margin="5" HorizontalOptions="Start" />
+
+            <HorizontalStackLayout Margin="5">
+                <Label Text="Vast lokaal?" VerticalOptions="Center"/>
+                <CheckBox />
+                <Entry
+                     Placeholder="Lokaalnr"
+                     WidthRequest="120"
+                     Keyboard="Numeric" />
+            </HorizontalStackLayout >
+
+            <HorizontalStackLayout Margin="5">
+                <Label Text="Datum eerste les:"/>
+                <DatePicker Date="01/01/2000" Margin="5"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Hoeveel denk je te scoren voor dit vak?" Margin="5"/>
+                <Label Text="10/20" Margin="5"/>
+                <Stepper Minimum="0" Maximum="20" Value="1" Margin="5"/>
+            </HorizontalStackLayout>
+
+            <Button Text="Opslaan"
+                Margin="5"
+                BackgroundColor="#5B2DCB"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="45"
+                WidthRequest="140"
+                HorizontalOptions="Start" />
+            <Label Text="Uitvoer" Margin="5" VerticalOptions="Start" FontSize="Title"/>
         </VerticalStackLayout>
     </StackLayout>
 </ContentPage>
