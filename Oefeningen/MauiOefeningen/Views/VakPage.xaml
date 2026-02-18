@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MauiOefeningen.ViewModels"
              x:Class="MauiOefeningen.Views.VakPage"
+             x:DataType="viewmodel:VakPageViewModel"
              Title="Vak">
     <StackLayout>
         <VerticalStackLayout HorizontalOptions="Start" Margin="5">
@@ -14,17 +16,18 @@
             <Image Source="pa.png" HeightRequest="100" HorizontalOptions="Start" Margin="5"/>
 
             <HorizontalStackLayout Margin="5">
-                <Entry Placeholder="Voornaam" WidthRequest="200" />
-                <Entry Placeholder="Naam" WidthRequest="500" />
+                <Entry Placeholder="Voornaam" Text="{Binding Voornaam}" WidthRequest="200" />
+                <Entry Placeholder="Naam" Text="{Binding Naam}" WidthRequest="500" />
             </HorizontalStackLayout>
 
-            <Entry Placeholder="Locatie campus" WidthRequest="700" Margin="5" HorizontalOptions="Start" />
+            <Entry Placeholder="Locatie campus" Text="{Binding Locatie}" WidthRequest="700" Margin="5" HorizontalOptions="Start" />
 
             <HorizontalStackLayout Margin="5">
                 <Label Text="Vast lokaal?" VerticalOptions="Center"/>
                 <CheckBox />
                 <Entry
                      Placeholder="Lokaalnr"
+                     Text="{Binding Lokaal}"
                      WidthRequest="120"
                      Keyboard="Numeric" />
             </HorizontalStackLayout >
@@ -34,10 +37,11 @@
                 <DatePicker Date="01/01/2000" Margin="5"/>
             </HorizontalStackLayout>
 
-            <HorizontalStackLayout>
-                <Label Text="Hoeveel denk je te scoren voor dit vak?" Margin="5"/>
-                <Label Text="10/20" Margin="5"/>
-                <Stepper Minimum="0" Maximum="20" Value="1" Margin="5"/>
+            <HorizontalStackLayout Margin="5">
+                <Label Text="Hoeveel denk je te scoren voor dit vak?"/>
+                <Label Text="{Binding Resultaat}" Margin="1" />
+                <Label Text="/20" Margin="1" />
+                <Stepper Increment="1" Minimum="0" Maximum="20" Value="{Binding Resultaat}" Margin="5"/>
             </HorizontalStackLayout>
 
             <Button Text="Opslaan"
@@ -47,8 +51,10 @@
                 CornerRadius="12"
                 HeightRequest="45"
                 WidthRequest="140"
+                Command="{Binding ResultaatTonenCommand}"
                 HorizontalOptions="Start" />
-            <Label Text="Uitvoer" Margin="5" VerticalOptions="Start" FontSize="Title"/>
+            
+            <Label Text="{Binding Uitvoer}"  Margin="5" VerticalOptions="Start" FontSize="Title"/>
         </VerticalStackLayout>
     </StackLayout>
 </ContentPage>

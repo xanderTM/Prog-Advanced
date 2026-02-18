@@ -1,6 +1,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MauiOefeningen.ViewModels"
              x:Class="MauiOefeningen.Views.AfbeeldingenPage"
+             x:DataType="viewmodel:AfbeeldingViewModel"
              Title="Afbeeldingen">
 
     <VerticalStackLayout Padding="20" Spacing="15">
@@ -10,12 +12,12 @@
             <Label Text="Selecteer een getal:"
                    VerticalOptions="Center"/>
 
-            <Label Text="getal"
+            <Label Text="{Binding Getal}"
                    VerticalOptions="Center"/>
 
             <Stepper Minimum="1"
                      Maximum="5"
-                     Value="1"
+                     Value="{Binding Getal}"
                      VerticalOptions="Center"/>
         </HorizontalStackLayout>
 
@@ -23,10 +25,11 @@
         BackgroundColor="#5B2DCB"
         TextColor="White"
         HeightRequest="55"
+        Command="{Binding VeranderAfbeeldingCommand}"
         HorizontalOptions="Start"
         WidthRequest="250"/>
 
-        <Image Source="landschap1.jpg" Aspect="AspectFill"/>
+        <Image Source="{Binding Resultaat}" WidthRequest="750"/>
 
     </VerticalStackLayout>
 </ContentPage>

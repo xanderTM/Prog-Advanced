@@ -18,6 +18,14 @@ namespace MauiOefeningen
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddSingleton<NaamTonenPage>();
+            builder.Services.AddSingleton<NaamTonenViewModel>();
+
+            builder.Services.AddSingleton<VakPage>();
+            builder.Services.AddSingleton<VakPageViewModel>();
+
+            builder.Services.AddSingleton<AfbeeldingenPage>();
+            builder.Services.AddSingleton<AfbeeldingViewModel>();
 
             return builder.Build();
         }
